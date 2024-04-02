@@ -1,4 +1,4 @@
-package com.example.webviewapp;
+package com.example.yakkerball;
 
 import org.junit.Test;
 

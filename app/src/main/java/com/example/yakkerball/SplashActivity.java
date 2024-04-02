@@ -1,10 +1,12 @@
-package com.example.webviewapp;
+package com.example.yakkerball;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.mob.yakkerball.R;
 
 public class SplashActivity extends AppCompatActivity {
 
