@@ -1,4 +1,4 @@
-package com.example.webviewapp;
+package com.example.yakkerball;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.mob.yakkerball.R;
 
 public class WebViewActivity extends AppCompatActivity {
     WebView webView;

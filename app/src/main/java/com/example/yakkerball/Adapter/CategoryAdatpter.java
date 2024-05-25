@@ -1,4 +1,4 @@
-package com.example.webviewapp.Adapter;
+package com.example.yakkerball.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.webviewapp.CateModal;
-import com.example.webviewapp.MainActivity;
-import com.example.webviewapp.R;
-import com.example.webviewapp.WebViewActivity;
+import com.example.yakkerball.CateModal;
+import com.mob.yakkerball.R;
+import com.example.yakkerball.WebViewActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

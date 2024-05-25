@@ -1,13 +1,12 @@
-package com.example.webviewapp;
+package com.example.yakkerball;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
-import com.example.webviewapp.Adapter.CategoryAdatpter;
+import com.example.yakkerball.Adapter.CategoryAdatpter;
+import com.mob.yakkerball.R;
 
 import java.util.ArrayList;
 
