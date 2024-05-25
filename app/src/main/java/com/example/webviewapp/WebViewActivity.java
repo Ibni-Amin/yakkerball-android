@@ -3,7 +3,6 @@ package com.example.webviewapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -41,29 +40,42 @@ public class WebViewActivity extends AppCompatActivity {
             finish();
         });
 
-        hideProgress();
-
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+
+        // Set the custom WebViewClient
+        webView.setWebViewClient(new MyBrowser());
+
+        // Show progress bar initially and load URL
+        showProgress();
         webView.loadUrl(url);
     }
 
-    private void hideProgress() {
+    private void showProgress() {
         progressBar.setVisibility(View.VISIBLE);
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run() {
-               progressBar.setVisibility(View.GONE);
-            }
-        }, 3000);
+    }
+
+    private void hideProgress() {
+        progressBar.setVisibility(View.GONE);
     }
 
     private class MyBrowser extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            showProgress();
             view.loadUrl(url);
             return true;
+        }
+
+        @Override
+        public void onPageStarted(WebView view, String url, android.graphics.Bitmap favicon) {
+            showProgress();
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            hideProgress();
         }
     }
 }
